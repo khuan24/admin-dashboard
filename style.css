@@ -11,9 +11,91 @@
 body {
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     min-height: 100vh;
+
+    --primary-clr: #1992D4;
+    --highlight-clr: #F0B429;
+    --grey-clr: #E2E8F0;
+
+    background-color: var(--grey-clr);
 }
 
 img, svg, picture, video {
     display: block;
     max-width: 100%;
+}
+
+.container {
+    display: grid;
+}
+
+.sidebar {
+    background-color: var(--primary-clr);
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo-container .icon {
+    width: 4rem;
+}
+
+.sidebar a {
+    color: inherit;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header {
+    background-color: white;
+}
+
+.header .icon {
+    width: 2rem;
+}
+
+.top-container,
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-bar,
+.user-center {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+input[type="text"] {
+    outline: none;
+    border-style: none;
+    border-radius: 50px;
+    background-color: var(--grey-clr);
+    height: 3rem;
+}
+
+.user-greeting {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.post-btns button {
+    background-color: var(--primary-clr);
+    color: white;
+    border-style: none;
+    border-radius: 50px;
+    font-weight: bold;
+    padding: .5em 1em;
+}
+
+.main-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
