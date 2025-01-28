@@ -42,14 +42,20 @@ hr {
     min-height: 100vh;
     display: grid;
     grid-template-columns: minmax(300px, 20%) 1fr;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 220px 1fr;
 }
 
 .sidebar {
     grid-area: 1 / 1 / 3 / 2;
+    display: grid;
+    row-gap: 5rem;
     background-color: var(--primary-clr);
     color: white;
     padding: 1.5rem;
+    align-self: start;
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
 }
 
 .sidebar a {
@@ -86,6 +92,7 @@ hr {
 .nav li {
     display: flex;
     align-items: center;
+    gap: 3rem;
 }
 
 .header {
@@ -94,7 +101,7 @@ hr {
     align-items: center;
     background-color: white;
     box-shadow: lightgray 0px 5px 20px;
-    padding: 0 3rem;
+    padding: 0.6rem 3rem;
 }
 
 .header .icon,
@@ -105,19 +112,38 @@ hr {
 .profile-img {
     border-radius: 50%;
     aspect-ratio: 1 / 1;
+    width: 3.5rem;
+    background-color: lightgray;
+}
+
+.profile-img.large {
+    width: 5.5rem;
+}
+
+p.big {
+    font-size: 1.6rem;
+}
+
+.header p {
+    font-weight: bold;
+}
+
+.user-center p {
+    font-size: 1.2rem;
 }
 
 .top-container,
 .bottom-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .search-bar,
 .user-center {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.8rem;
 }
 
 input[type="text"] {
@@ -125,13 +151,16 @@ input[type="text"] {
     border-style: none;
     border-radius: 50px;
     background-color: var(--grey-clr);
-    height: 3rem;
+    height: 2.2rem;
+    width: 40vw;
+    font-size: 1.2rem;
+    padding: 0 1.2rem;
 }
 
 .user-greeting {
-    font-weight: bold;
     display: flex;
     align-items: center;
+    gap: 1.6rem;
 }
 
 .post-btns button {
@@ -142,19 +171,23 @@ input[type="text"] {
     font-size: 1.1rem;
     font-weight: bold;
     padding: .5em 1em;
-    width: 7rem;
+    width: 8rem;
 
+}
+
+button + button {
+    margin-left: 2rem;
 }
 
 .main-container h2 {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.6rem;
 }
 
 .main-container {
     grid-area: 2 / 2 / 3 /3;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
     padding: 2rem;
@@ -207,12 +240,18 @@ input[type="text"] {
     gap: 2rem;
 }
 
-.sub-category {
+.announcements .sub-category {
     padding: 3rem 3rem;
+}
+
+.trending .sub-category {
+    padding: 2rem 2rem;
 }
 
 .trending-user {
     display: flex;
+    gap: 1.6rem;
+    align-items: center;
 }
 
 .trending-user + .trending-user {
