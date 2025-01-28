@@ -28,6 +28,16 @@ p {
     line-height: 1.5;
 }
 
+h2, 
+h3,
+h4 {
+    font-weight: bold;
+}
+
+hr {
+    margin: 2rem 0;
+}
+
 .container {
     min-height: 100vh;
     display: grid;
@@ -42,8 +52,15 @@ p {
     padding: 1.5rem;
 }
 
-.nav ul {
-    list-style: none;
+.sidebar a {
+    color: inherit;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sidebar svg {
+    fill: white;
 }
 
 .logo-container {
@@ -57,21 +74,37 @@ p {
     width: 4rem;
 }
 
-.sidebar a {
-    color: inherit;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
+
+.nav ul {
+    list-style: none;
+}
+
+.nav svg {
+    width: 3rem;
+}
+
+.nav li {
+    display: flex;
+    align-items: center;
 }
 
 .header {
     grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    align-items: center;
     background-color: white;
+    box-shadow: lightgray 0px 5px 20px;
+    padding: 0 3rem;
 }
 
 .header .icon,
 .card .icon {
     width: 2rem;
+}
+
+.profile-img {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
 }
 
 .top-container,
@@ -106,13 +139,15 @@ input[type="text"] {
     color: white;
     border-style: none;
     border-radius: 50px;
+    font-size: 1.1rem;
     font-weight: bold;
     padding: .5em 1em;
+    width: 7rem;
+
 }
 
 .main-container h2 {
     font-size: 1.5rem;
-    font-weight: bold;
     margin-bottom: 2rem;
 }
 
@@ -135,23 +170,33 @@ input[type="text"] {
     gap: 2rem;
 }
 
+.sub-category,
 .card {
     background-color: white;
     border-radius: 10px;
-    padding: 3rem 2rem;
-    height: 280px;
-    display: grid;
-    grid-template-rows: 2fr 1fr;
     box-shadow: lightgray 3px 3px 10px;
 }
 
+.card {
+    border-left: var(--highlight-clr) 10px solid;
+    height: 280px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    padding: 3rem 2rem;
+}
+
+.card p:last-of-type,
+.announcement-msg p,
+.profile p:last-of-type {
+    color: gray;
+}
+
+
 .card h3 {
-    font-weight: bold;
     font-size: 1.2rem;
 }
 
 .card p {
-    color: gray;
     font-size: 1.1rem;
 }
 
@@ -160,4 +205,16 @@ input[type="text"] {
     justify-content: flex-end;
     align-items: flex-end;
     gap: 2rem;
+}
+
+.sub-category {
+    padding: 3rem 3rem;
+}
+
+.trending-user {
+    display: flex;
+}
+
+.trending-user + .trending-user {
+    margin-top: 2rem;
 }
